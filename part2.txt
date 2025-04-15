@@ -1,6 +1,6 @@
 WongAvery
 iHateC++
- HTMLRules
+HTMLRules
 JavaScriptRocks
 ShraviBeatsReact
 ThisIsJSyay

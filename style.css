@@ -1,0 +1,196 @@
+
+/* CSS Variables & Fallback */
+:root {
+  --main-bg: #f4f4f4;
+  --highlight-color: hsl(45, 100%, 50%);
+  --fallback-color: #ffd700;
+}
+body {
+  background-color: var(--main-bg, #ffffff);
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*  Text Styling  */
+h1, h2, h3 {
+  text-align: center;
+  color: color-mix(in srgb, orange 80%, black 20%);
+}
+p {
+  text-align: justify;
+}
+a {
+  color: rgb(30, 144, 255);
+  text-decoration: none;
+}
+a:hover {
+  color: #ff4500;
+}
+a:active {
+  color: hsla(340, 100%, 50%, 0.7);
+}
+
+/*  Box Model  */
+header, section, footer {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+}
+
+main > section {
+  margin-top: 10px;
+}
+footer > span {
+  display: inline-block;
+  margin: auto;
+  padding: 10px 15px 10px 15px;
+  border: 2px dashed rebeccapurple;
+}
+
+/* Longhand and Shorthand Margins */
+nav {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+main {
+  margin: 10px 15px 20px 25px;
+}
+
+/* Padding longhand and shorthand */
+section#media {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+section#comments {
+  padding: 5px 10px 15px 20px;
+}
+
+/*  Display  */
+nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 10px;
+  padding: 0;
+}
+div, span {
+  display: inline-block;
+}
+section#old-business {
+  display: none; /* Just to fulfill requirement */
+}
+
+/*  Units  */
+img {
+  width: 50vw;
+  height: auto;
+  max-width: 100%;
+  min-width: 150px;
+}
+audio, video {
+  width: 90%;
+  height: auto;
+  max-width: 640px;
+}
+
+/*  Positioning  */
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+section#comments {
+  position: relative;
+}
+footer {
+  position: static;
+}
+
+/*  Flexbox  */
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Flexbox Attributes */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/*  Grid  */
+section#form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+section#form label {
+  grid-column: 1 / 2;
+}
+section#form input,
+section#form select,
+section#form textarea {
+  grid-column: 2 / 3;
+}
+
+/*  Pseudo-class and New Selectors  */
+input:focus {
+  outline: 2px solid var(--highlight-color, #ffa500);
+}
+form:has(textarea:focus) {
+  border: 2px solid red;
+}
+input[type="text"]:hover {
+  background-color: #f0f0f0;
+}
+
+/*  Selectors  */
+#attendance li {
+  color: green;
+}
+* {
+  box-sizing: border-box;
+}
+ul, ol {
+  margin-bottom: 10px;
+}
+section > h2 {
+  font-size: 1.5rem;
+}
+h1.title {
+  font-weight: bold;
+}
+a[href="#comments"] {
+  font-style: italic;
+}
+li ~ li {
+  font-weight: 600;
+}
+label + input {
+  border: 1px solid #ccc;
+}
+h2, p {
+  margin-top: 10px;
+}
+
+/*  Responsive Design  */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  section#form {
+    grid-template-columns: 1fr;
+  }
+  img {
+    width: 100%;
+  }
+}

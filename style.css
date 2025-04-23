@@ -16,7 +16,7 @@ body {
 /*  Text Styling  */
 h1, h2, h3 {
   text-align: center;
-  color: color-mix(in srgb, orange 80%, black 20%);
+  color: darkorange;
 }
 p {
   text-align: justify;
